@@ -94,7 +94,7 @@ export async function POST(request: Request): Promise<Response> {
   const from = process.env.LEAD_FROM_EMAIL;
   const to = process.env.LEAD_TO_EMAIL;
  if (!apiKey || !from || !to) {
-  return json({ ok: true, bypassed: true });
+return json({ accepted: true, receipt: "BYPASS-OK" });
 }
 
   const details = [
